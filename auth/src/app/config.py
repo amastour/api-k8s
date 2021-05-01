@@ -36,3 +36,5 @@ config = {
     'test': TestingConfig,
     'prod': ProductionConfig
 }
+
+key = Config.SECRET_KEY

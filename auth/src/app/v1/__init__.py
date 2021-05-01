@@ -7,3 +7,8 @@ auth_api = Api(auth_blueprint,
                 title="Auth API",
                 version="1.0",
                 description="Authentication engine")
+
+from .views.auth import auth_ns
+from .views.user import user_ns
+auth_api.add_namespace(auth_ns)
+auth_api.add_namespace(user_ns)

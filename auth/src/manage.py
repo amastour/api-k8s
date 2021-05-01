@@ -13,6 +13,10 @@ manager = Manager(app)
 def ping():
     return jsonify("pong")
 
+@manager.command
+def db_init():
+    db.create_all()
+
 
 @manager.command
 def run():
