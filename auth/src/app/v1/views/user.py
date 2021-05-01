@@ -11,7 +11,7 @@ user_ns = Namespace("user", "User operations")
 
 @user_ns.route("/")
 class UserList(Resource):
-    @user_ns.doc('list_of_registered_users')
+    @user_ns.doc('list_of_registered_users',security='api_key')
     @token_required
     @user_ns.marshal_list_with(UserModel.user, envelope='data')
     def get(self):
