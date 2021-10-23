@@ -1,0 +1,14 @@
+version: '3'
+
+services: 
+    db:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        environment:
+            MYSQL_USER: hero
+            MYSQL_PASSWORD: amaterasu
+            MYSQL_DATABASE: heroku
+            MYSQL_ROOT_PASSWORD: Ma@bk372191
+        ports: 
+            - 3306:3306

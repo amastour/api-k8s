@@ -5,7 +5,7 @@ from flask import jsonify
 
 from app import create_app, db
 
-env = os.getenv("CONFIG_TYPE") or "dev"
+env = os.getenv("CONFIG_TYPE","dev") 
 app = create_app(env)
 manager = Manager(app)
 
